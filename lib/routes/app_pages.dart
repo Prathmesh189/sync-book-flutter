@@ -1,4 +1,6 @@
 
+import 'package:gargisbeautyparlor/screen/auth/register_screen.dart';
+import 'package:gargisbeautyparlor/screen/auth/verification_screen.dart';
 import 'package:get/get.dart';
 
 import '../binding/auth_binding.dart';
@@ -15,6 +17,16 @@ class AppPages {
     GetPage(
       name: Routes.LOGIN_SCREEN,
       page: () => const LoginScreen(),
+      binding: AuthBinding(),
+    ),
+    GetPage(
+      name: Routes.REGISTER_SCREEN,
+      page: () => const RegisterScreen(),
+      binding: AuthBinding(),
+    ),
+    GetPage(
+      name: Routes.VERIFICATION_SCREEN,
+      page: () => const VerificationScreen(),
       binding: AuthBinding(),
     ),
 

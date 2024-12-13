@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gargisbeautyparlor/screen/auth/register_screen.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
@@ -75,29 +76,25 @@ class _LoginScreenState extends State<LoginScreen> {
     Color? color,
     String? text,
   }) {
-    return GestureDetector(
-        onTapDown: (_) => changeColor.changeBorderColor(ColorsForApp.buttonTextColor),
-        onTapUp: (_) {
-
-          changeColor.changeBorderColor(ColorsForApp.primaryButtonColor);
-          //Get.to(() => RegisterScreen()); // Navigate to the next screen
-        },
-        child: Container(
-          height: height ?? 6.h,
-          width: width ?? 28.w,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(11),
-            //border: Border.all(color:color?? ColorsForApp.primaryButtonColor)
-          ),
-          child: Center(
-              child: Text(
-                text ?? "Data",
-                style: TextHelper.size12(context).copyWith(
-                    color: ColorsForApp.primaryButtonColor,fontWeight: FontWeight.bold
-                ),
-              )),
-        )
-
+    return InkWell(
+      onTap: (){
+        Get.to(RegisterScreen());
+      },
+      child: Container(
+        height: height ?? 6.h,
+        width: width ?? 28.w,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(11),
+          border: Border.all(color:color?? ColorsForApp.primaryButtonColor)
+        ),
+        child: Center(
+            child: Text(
+              text ?? "Data",
+              style: TextHelper.size12(context).copyWith(
+                  color: ColorsForApp.primaryButtonColor,fontWeight: FontWeight.bold
+              ),
+            )),
+      ),
     );
   }
 

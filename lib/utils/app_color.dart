@@ -8,9 +8,11 @@ class ColorsForApp {
   static Color blackTextColor=const Color(0xff000000);
 
 
+
+
 //App color
 
-  static Color textFieldColor=const Color(0xfff2f2f2);
+  static Color textFieldColor=const Color(0xfff5f5f5);
   static Color pendingTextColor=const Color(0xffFF00B2);
   static Color scheduledTextColor=const Color(0xffFF6F01);
   static Color acceptTextColor=const Color(0xff08AE6E);
