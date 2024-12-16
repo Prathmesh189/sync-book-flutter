@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gargisbeautyparlor/screen/auth/auth_widget.dart';
-import 'package:gargisbeautyparlor/screen/auth/verification_screen.dart';
+import 'package:gargisbeautyparlor/routes/routes.dart';
 import 'package:gargisbeautyparlor/utils/app_color.dart';
+import 'package:gargisbeautyparlor/widget/common_button.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:sizer/sizer.dart';
-
 
 import '../../utils/text_style.dart';
 class RegisterScreen extends StatefulWidget {
@@ -55,15 +54,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
               SizedBox(height: 10.h,),
               Column(
                 children: [
-                  AuthWidget.authCommonButtonWidget(context,
+                  CommonButton.authCommonButtonWidget(context,
                       text: "Sign In",
                         onTap: () {
-                        Get.to(VerificationScreen());
+                        Get.toNamed(Routes.OTP_VERIFICATION_SCREEN);
                         })
                 ],
               )
             ],
           )),
-    );;
+    );
   }
 }

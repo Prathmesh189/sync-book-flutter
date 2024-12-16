@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gargisbeautyparlor/screen/auth/register_screen.dart';
+import 'package:gargisbeautyparlor/routes/routes.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../controller/auth_controller.dart';
 import '../../generator/assets.dart';
 import '../../utils/app_color.dart';
@@ -78,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }) {
     return InkWell(
       onTap: (){
-        Get.to(RegisterScreen());
+        Get.toNamed(Routes.REGISTER_SCREEN);
       },
       child: Container(
         height: height ?? 6.h,

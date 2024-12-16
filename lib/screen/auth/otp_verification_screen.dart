@@ -4,14 +4,14 @@ import 'package:gargisbeautyparlor/utils/text_style.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 import 'package:sizer/sizer.dart';
-class VerificationScreen extends StatefulWidget {
-  const VerificationScreen({super.key});
+class OtpVerificationScreen extends StatefulWidget {
+  const OtpVerificationScreen({super.key});
 
   @override
-  State<VerificationScreen> createState() => _VerificationScreenState();
+  State<OtpVerificationScreen> createState() => _OtpVerificationScreenState();
 }
 
-class _VerificationScreenState extends State<VerificationScreen> {
+class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
