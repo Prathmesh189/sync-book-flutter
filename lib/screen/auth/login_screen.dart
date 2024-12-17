@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gargisbeautyparlor/routes/routes.dart';
+import 'package:gargisbeautyparlor/widget/common_button.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import '../../controller/auth_controller.dart';
 import '../../generator/assets.dart';
 import '../../utils/app_color.dart';
 import '../../utils/text_style.dart';
+import '../../widget/common_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -35,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   fit: BoxFit.fill,
                 )),
           ),
-          SizedBox(height: 4.h,),
+          height(4.h,),
           Container(
             child: Column(
               children: [
@@ -46,17 +48,22 @@ class _LoginScreenState extends State<LoginScreen> {
                 copyWith(color: ColorsForApp.primaryButtonColor,
                     fontWeight: FontWeight.bold),),
 
-                SizedBox(height: 11.h,),
+                height(11.h,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    buildContainerButton(
+                    CommonButton.authCommonContainerButton(context,
                       text: "Login",
-                      color: Colors.white,
-                    ),
-                    buildContainerButton(
+                      color: ColorsForApp.textFieldColor,
+                      onTap: () {
+                        Get.toNamed(Routes.REGISTER_SCREEN);
+                      }),
+                    CommonButton.authCommonContainerButton(context,
                       text: "Get Started",
-                    )
+                      color: ColorsForApp.primaryButtonColor,
+                      onTap: () {
+                        Get.toNamed(Routes.REGISTER_SCREEN);
+                      })
 
                   ],
                 )
@@ -67,34 +74,6 @@ class _LoginScreenState extends State<LoginScreen> {
       );
 
     }));
-  }
-  Widget buildContainerButton({
-    Key? key,
-    double? height,
-    double? width,
-    Color? color,
-    String? text,
-  }) {
-    return InkWell(
-      onTap: (){
-        Get.toNamed(Routes.REGISTER_SCREEN);
-      },
-      child: Container(
-        height: height ?? 6.h,
-        width: width ?? 28.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(11),
-          border: Border.all(color:color?? ColorsForApp.primaryButtonColor)
-        ),
-        child: Center(
-            child: Text(
-              text ?? "Data",
-              style: TextHelper.size12(context).copyWith(
-                  color: ColorsForApp.primaryButtonColor,fontWeight: FontWeight.bold
-              ),
-            )),
-      ),
-    );
   }
 
 }

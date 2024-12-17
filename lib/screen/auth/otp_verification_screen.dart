@@ -4,6 +4,8 @@ import 'package:gargisbeautyparlor/utils/text_style.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../widget/common_widget.dart';
 class OtpVerificationScreen extends StatefulWidget {
   const OtpVerificationScreen({super.key});
 
@@ -48,7 +50,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 5.h),
+              height(5.h),
               Pinput(
                 defaultPinTheme:PinTheme(
                 width: 13.w,
@@ -69,7 +71,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 5.h),
+              height(5.h),
               Column(
                 children: [
                   Text("Did not recieve code?",style: TextHelper.size14(context).copyWith(color: ColorsForApp.blackTextColor),)

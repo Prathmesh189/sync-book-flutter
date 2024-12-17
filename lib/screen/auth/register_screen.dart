@@ -8,6 +8,7 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utils/text_style.dart';
+import '../../widget/common_widget.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
@@ -33,7 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 5.h,),
+              height(5.h),
               Padding(
                 padding: EdgeInsets.only(left: 10.w,right: 10.w),
                 child: Column(
@@ -51,7 +52,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: 10.h,),
+              height(10.h),
               Column(
                 children: [
                   CommonButton.authCommonButtonWidget(context,

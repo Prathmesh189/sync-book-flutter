@@ -6,6 +6,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../routes/routes.dart';
 import '../../utils/text_style.dart';
+import '../../widget/common_widget.dart';
 
 class RegisterNameScreen extends StatefulWidget {
   const RegisterNameScreen({super.key});
@@ -37,7 +38,7 @@ class _RegisterNameScreenState extends State<RegisterNameScreen> {
               Text("What is your name?",style: TextHelper.size15(context).copyWith(
                   color: ColorsForApp.blackTextColor
               ),),
-              SizedBox(height: 3.h),
+              height(3.h),
               Padding(
                 padding: EdgeInsets.only(right: 5.w),
                 child: TextField(
@@ -53,7 +54,7 @@ class _RegisterNameScreenState extends State<RegisterNameScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20.h,),
+              height(20.h,),
               Padding(
                 padding:  EdgeInsets.only(left: 8.w,right: 10.w),
                 child: Column(

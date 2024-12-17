@@ -13,7 +13,7 @@ import 'routes.dart';
 class AppPages {
   AppPages._();
 
-  static const String INITIAL_ROUTE = Routes.REGISTER_NAME_SCREEN;
+  static const String INITIAL_ROUTE = Routes.LOGIN_SCREEN;
 
   static final routes = [
 
