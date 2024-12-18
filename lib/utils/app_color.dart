@@ -8,9 +8,11 @@ class ColorsForApp {
   static Color blackTextColor=const Color(0xff000000);
 
 
+
+
 //App color
 
-  static Color textFieldColor=const Color(0xfff2f2f2);
+  static Color textFieldColor=const Color(0xfff5f5f5);
   static Color pendingTextColor=const Color(0xffFF00B2);
   static Color scheduledTextColor=const Color(0xffFF6F01);
   static Color acceptTextColor=const Color(0xff08AE6E);
@@ -22,6 +24,7 @@ class ColorsForApp {
   static Color serviceCircleColor=const Color(0xffE1F5FA);
   static Color serviceIconColor=const Color(0xff156778);
   static Color shareInviteCodeButtonColor=const Color(0xff1854AF);
+
   static Color offerIconColor=const Color(0xff3BFB00);
   static Color offerButtonColor=const Color(0xffD3D3D3);
   static Color notificationIconColor=const Color(0xffF32F2F);
